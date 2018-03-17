@@ -1,0 +1,11 @@
+version: '3'
+services:
+   h2o:
+      build: .
+      ports:
+         - "80:80"
+         - "443:443"
+      volumes:
+         - ./doc_root:/usr/www/doc_root
+         - ./conf:/usr/www/conf
+         - ./mruby:/usr/www/mruby

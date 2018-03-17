@@ -1,0 +1,3 @@
+docker build -t h2o .
+docker run -itd -v `pwd`/www/doc_root:/usr/www/doc_root -v `pwd`/conf:/usr/www/conf -p 80:80 -p 443:443 --name h2o h2o #old
+
