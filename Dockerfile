@@ -43,8 +43,6 @@ RUN	mkdir -p conf && \
 
 # H2O run as root for bind port:80/443(require CAP_NET_BIND_SERVICE, cause EACCES) first. then www by setuid
 USER	root
-WORKDIR	/usr/www
 ENV	H2O_ROOT=/usr/www
-EXPOSE 80
 CMD	["h2o", "-m", "master", "-c", "/usr/www/conf/h2o.conf"]	
 
